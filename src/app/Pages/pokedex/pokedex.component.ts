@@ -11,9 +11,5 @@ import { Router } from '@angular/router';
 })
 export class PokedexComponent {
 
-  constructor(private router: Router) {}
 
-  redirectToDetails(pokemonId: string) {
-    this.router.navigate(['/pokemon-details', pokemonId]);
-  }
 }

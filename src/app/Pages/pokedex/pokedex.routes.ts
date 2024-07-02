@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { PokedexComponent } from './pokedex.component';
 import { PokemonGalleryComponent } from './pokemon-list/pokemon-gallery.component';
 import { PokedexDetailComponent } from './pokedex-detail/pokedex-detail.component';
+import { PokedexLoginComponent } from './pokedex-login/pokedex-login/pokedex-login.component';
 
 export const routes: Routes = [
     {
@@ -18,9 +19,13 @@ export const routes: Routes = [
                 component: PokemonGalleryComponent
             },
             {
-                path: 'pokemon-details/:id', // Add this line for details route with ID parameter
+                path: 'pokemon-details/:id',
                 component: PokedexDetailComponent
-            }
+            },
+            {
+              path: 'login',
+              component: PokedexLoginComponent
+          }
         ]
     }
 ];
