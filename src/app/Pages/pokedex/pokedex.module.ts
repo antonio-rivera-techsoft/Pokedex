@@ -8,11 +8,10 @@ import { SharedModule } from '../../../shared/shared.module';
 import { PokedexDetailComponent } from './pokedex-detail/pokedex-detail.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { PokedexLoginComponent } from './pokedex-login/pokedex-login/pokedex-login.component';
 import { PokedexManageComponent } from './pokedex-manage/pokedex-manage/pokedex-manage.component';
 
 @NgModule({
-  declarations: [PokedexComponent, PokemonGalleryComponent, PokedexDetailComponent, PokedexLoginComponent, PokedexManageComponent],
+  declarations: [PokedexComponent, PokemonGalleryComponent, PokedexDetailComponent, PokedexManageComponent],
   imports: [
     CommonModule,
     SharedModule,

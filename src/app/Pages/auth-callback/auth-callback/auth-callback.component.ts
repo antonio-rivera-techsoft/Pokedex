@@ -20,7 +20,7 @@ export class AuthCallbackComponent implements OnInit{
   checkSession() {
     this.auth.isLogged().subscribe(l => this.isLogged = l);
     if(this.isLogged){
-      this.router.navigate(['']);	
+      this.router.navigate(['']);
     }
   }
 }
