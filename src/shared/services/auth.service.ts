@@ -25,10 +25,12 @@ export class AuthService {
     return of(false)
   }
 
-  login(email:string, pass:string){
+  login(email:string, pass:string):Observable<boolean>{
     let findUser = this.users.find(user => user.email.toLowerCase() === email.toLowerCase() && user.password === pass);
     if(findUser){
       sessionStorage.setItem('userInfo',JSON.stringify(findUser))
+      return of(true);
     }
+    return of(false);
   }
 }

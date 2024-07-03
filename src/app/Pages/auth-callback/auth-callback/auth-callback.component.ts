@@ -22,5 +22,6 @@ export class AuthCallbackComponent implements OnInit{
     if(this.isLogged){
       this.router.navigate(['']);
     }
+    this.router.navigate(['login']);
   }
 }

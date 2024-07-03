@@ -7,12 +7,14 @@ import { ShellComponent } from './Shell/shell.component';
 import { SharedModule } from '../../shared/shared.module';
 import { ToolbarComponent } from '../../shared/components/toolbar/toolbar.component';
 import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [PagesComponent, ShellComponent, LoginComponent],
   imports: [
     CommonModule,
     SharedModule,
+    FormsModule,
     ToolbarComponent,
     RouterModule.forChild(routes)
   ],

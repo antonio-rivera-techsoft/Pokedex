@@ -11,11 +11,11 @@ export const routes: Routes = [
         children: [
             {
                 path: '',
-                redirectTo: 'pokemon-list',
+                redirectTo: 'pokedex-list',
                 pathMatch: 'full'
             },
             {
-                path: 'pokemon-list',
+                path: 'pokedex-list',
                 component: PokemonGalleryComponent
             },
             {

@@ -5,16 +5,17 @@ import { LoginComponent } from './Pages/login/login.component';
 
 export const routes: Routes = [
     {
+        path: 'login',
+        component:LoginComponent
+    },
+    {
         path: '',
         loadChildren: () => import('../app/Pages/pages.module').then(m => m.PagesModule),
-        canActivate: [AuthGuardService]
+        // canActivate: [AuthGuardService]
     },
     {
         path: 'auth-callback',
         component:AuthCallbackComponent
-    },
-    {
-      path: 'login',
-      component:LoginComponent
-  }
+    }
+    
 ];
