@@ -12,6 +12,7 @@
 
 
       @for(pokemon of pokemonsList | filter: filterValue ; track pokemon.name){
+      <!-- <app-pokedex-manage [currentPokemon]="pokemon"></app-pokedex-manage> -->
 
         <div appHover class="pokemon-card" (click)="redirectToDetails(pokemon.detail.id)">
 

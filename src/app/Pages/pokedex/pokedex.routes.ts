@@ -3,6 +3,7 @@ import { PokedexComponent } from './pokedex.component';
 import { PokemonGalleryComponent } from './pokemon-list/pokemon-gallery.component';
 import { PokedexDetailComponent } from './pokedex-detail/pokedex-detail.component';
 import { PokedexLoginComponent } from './pokedex-login/pokedex-login/pokedex-login.component';
+import { PokedexManageComponent } from './pokedex-manage/pokedex-manage/pokedex-manage.component';
 
 export const routes: Routes = [
     {
@@ -23,9 +24,9 @@ export const routes: Routes = [
                 component: PokedexDetailComponent
             },
             {
-              path: 'login',
-              component: PokedexLoginComponent
-          }
+              path: 'pokemon-manage',
+              component: PokedexManageComponent
+            }
         ]
     }
 ];

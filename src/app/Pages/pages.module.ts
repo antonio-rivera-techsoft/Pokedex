@@ -6,9 +6,10 @@ import { routes } from './pages.routes';
 import { ShellComponent } from './Shell/shell.component';
 import { SharedModule } from '../../shared/shared.module';
 import { ToolbarComponent } from '../../shared/components/toolbar/toolbar.component';
+import { LoginComponent } from './auth-callback/login/login.component';
 
 @NgModule({
-  declarations: [PagesComponent, ShellComponent],
+  declarations: [PagesComponent, ShellComponent, LoginComponent],
   imports: [
     CommonModule,
     SharedModule,
