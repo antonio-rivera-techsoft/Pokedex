@@ -11,11 +11,11 @@ export const routes: Routes = [
     {
         path: '',
         loadChildren: () => import('../app/Pages/pages.module').then(m => m.PagesModule),
-        // canActivate: [AuthGuardService]
+        canActivate: [AuthGuardService]
     },
     {
         path: 'auth-callback',
         component:AuthCallbackComponent
     }
-    
+
 ];
