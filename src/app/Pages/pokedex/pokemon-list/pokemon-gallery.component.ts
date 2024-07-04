@@ -30,11 +30,12 @@ export class PokemonGalleryComponent implements OnInit{
     //   mergeMap(b=> b)
     // )
 
-    this.pokeservice.getAll().pipe(map(response => {
-      response.results.forEach(pokemon => {
-        this.pokeservice.getPokemonDetails(pokemon.url).subscribe(details => pokemon.detail = details);
-      });
-    })).subscribe(c=>c)
+    this.pokeservice.getAll().pipe(map(response=>{
+      response.results.forEach((pokemon) => {
+        this.pokeservice.getPokemonDetails(pokemon.url).subscribe(d => pokemon.detail = d)
+      })
+      return response.results;
+    })).subscribe(p => this.pokemonsList = p);
   }
 
   redirectToDetails(pokemonId: number) {
