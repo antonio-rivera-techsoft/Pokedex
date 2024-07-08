@@ -3,6 +3,7 @@ import { PokedexComponent } from './pokedex.component';
 import { PokemonGalleryComponent } from './pokemon-list/pokemon-gallery.component';
 import { PokedexDetailComponent } from './pokedex-detail/pokedex-detail.component';
 import { PokedexManageComponent } from './pokedex-manage/pokedex-manage/pokedex-manage.component';
+import { PokemonEditComponent } from './pokemon-edit/pokemon-edit.component';
 
 export const routes: Routes = [
     {
@@ -25,6 +26,10 @@ export const routes: Routes = [
             {
               path: 'pokemon-manage',
               component: PokedexManageComponent
+            },
+            {
+                path: 'edit/:id',
+                component: PokemonEditComponent
             }
         ]
     }

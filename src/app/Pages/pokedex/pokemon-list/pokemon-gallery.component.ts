@@ -16,6 +16,9 @@ export class PokemonGalleryComponent implements OnInit{
 
   constructor(private pokeservice: PokemonService, private router: Router) {}
 
+  filterExpression(event: string) {
+    this.filterValue = event;
+  }
   ngOnInit(): void {
     // this.pokeservice.getAll().subscribe(p=> {
     //     p.results.forEach((poke:PokemonEntity) => {

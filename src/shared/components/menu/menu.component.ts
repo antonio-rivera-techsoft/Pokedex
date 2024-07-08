@@ -1,6 +1,6 @@
 import { menuOption } from './../../models/menu-option/menuOption';
 import { Observable } from 'rxjs';
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { MenuService } from '../../services/general/menu.service';
 import { AuthService } from '../../services/auth.service';
 
@@ -15,7 +15,7 @@ import { AuthService } from '../../services/auth.service';
   `,
   styleUrl: './menu.component.scss'
 })
-export class MenuComponent {
+export class MenuComponent implements OnInit{
   private menu = inject(MenuService);
   private auth = inject(AuthService);
   userRole:string = "";

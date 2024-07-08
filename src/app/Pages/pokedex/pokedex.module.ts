@@ -6,19 +6,20 @@ import { PokemonGalleryComponent } from './pokemon-list/pokemon-gallery.componen
 import { PokedexComponent } from './pokedex.component';
 import { SharedModule } from '../../../shared/shared.module';
 import { PokedexDetailComponent } from './pokedex-detail/pokedex-detail.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PokedexManageComponent } from './pokedex-manage/pokedex-manage/pokedex-manage.component';
+import { PokemonEditComponent } from './pokemon-edit/pokemon-edit.component';
 
 @NgModule({
-  declarations: [PokedexComponent, PokemonGalleryComponent, PokedexDetailComponent, PokedexManageComponent],
+  declarations: [PokedexComponent, PokemonGalleryComponent, PokedexDetailComponent, PokedexManageComponent, PokemonEditComponent],
   imports: [
     CommonModule,
     SharedModule,
-    FormsModule,
     HttpClientModule,
     RouterModule.forChild(routes),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   ],
   bootstrap: [PokedexComponent]
 })
